@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     include "./model/model_users.php";
     include "./utils/functions.php";
 

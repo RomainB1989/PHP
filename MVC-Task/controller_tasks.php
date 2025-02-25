@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     include "./model/model_tasks.php";
     include "./utils/functions.php";
 
