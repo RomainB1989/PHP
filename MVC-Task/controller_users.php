@@ -5,7 +5,6 @@
     include "./utils/functions.php";
 
     $listUsers = showUsers(connectBdd());
-
     if(!empty($listUsers)){
         $message = "<ul><h2>Mes Utilisateurs : </h2>";
         foreach ($listUsers as $row){
