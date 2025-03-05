@@ -1,13 +1,13 @@
 <?php
 
-    session_start();
+    // session_start();
 
-    include "./utils/utils.php";
-    include "./model/modelCategory.php";
-    include "./view/viewHeader.php";
-    include "./view/viewCategory.php";
-    include "./view/viewFooter.php";
-    include "./controllerGeneric.php";
+    // include "./utils/utils.php";
+    // include "./model/modelCategory.php";
+    // include "./view/viewHeader.php";
+    // include "./view/viewCategory.php";
+    // include "./view/viewFooter.php";
+    // include "./controllerGeneric.php";
 
     class ControllerCategory extends ControllerGeneric{
 
@@ -96,14 +96,14 @@
         public function render():void{
             $this->getViewCategory()->setMessage($this->AddCategory());
             $this->getViewCategory()->setCategoryList($this->readCategories());
-
+            $this->getViewHeader()->setListLinks($this->modifyLinks());
             echo $this->getViewHeader()->displayView().$this->getViewCategory()->displayView().$this->getViewFooter()->displayView();
         }
 
     }
 
-
-    $category = new ControllerCategory(new ViewCategory(), new ModelCategory(), new ViewHeader(), new ViewFooter());
-    $category->render();
+    //A mettre dans le routeur après
+    // $category = new ControllerCategory(new ViewCategory(), new ModelCategory(), new ViewHeader(), new ViewFooter());
+    // $category->render();
 
 ?>

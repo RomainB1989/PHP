@@ -1,12 +1,12 @@
 <?php
-    session_start();
+    // session_start();
 
-    include "./utils/utils.php";
-    include "./model/modelUser.php";
-    include "./view/viewHeader.php";
-    include "./view/viewHome.php";
-    include "./view/viewFooter.php";
-    include "./controllerGeneric.php";
+    // include "./utils/utils.php";
+    // include "./model/modelUser.php";
+    // include "./view/viewHeader.php";
+    // include "./view/viewHome.php";
+    // include "./view/viewFooter.php";
+    // include "./controllerGeneric.php";
 
     Class ControllerHome extends ControllerGeneric{
 
@@ -59,7 +59,7 @@
                             // Password chiffrer
                             $this->getModelUser()->setNickname(sanitize($_POST["nickname"]));
                             $this->getModelUser()->setEmail(sanitize($_POST["email"]));
-                            $this->getModelUser()->setPassword(password_hash(sanitize($_POST["password"]), PASSWORD_DEFAULT));
+                            $this->getModelUser()->setPassword(password_hash(sanitize($_POST["password"]), PASSWORD_BCRYPT));
                             //Check si email exist en BDD
                             if(empty($this->getModelUser()->getByEmail())){
                                 $message = $this->getModelUser()->add();
@@ -83,10 +83,10 @@
             $messageConnexion = "";
 
             if (!empty($_POST)){
-                //verifie si submit du formulaire de creation de compte Utilisateur existe
+                //verifie si submit du formulaire de connexion Utilisateur existe
                 if(isset($_POST["submitConnexion"])){
                     //echo "<p>Le formulaire a été envoyé</p>";
-                    //verifie si champs du formulaire de creation de compte ne sont pas vide
+                    //verifie si champs du formulaire de connexion Utilisateur ne sont pas vide
                     if(isset($_POST["nickname"]) && isset($_POST["email"]) && isset($_POST["password"])
                     && !empty($_POST["nickname"]) && !empty($_POST["email"]) && !empty($_POST["password"])){
                         //echo "<p>Visiblement vous voulez connecter un Utilisateur.</p>";
@@ -105,7 +105,7 @@
                                     $_SESSION["nickname"] = $user[0]["nickname"];
                                     $_SESSION["email"] = $user[0]["email"];
                                     //echo "<p>Session : ".$_SESSION["nickname"]."  Email : ".$_SESSION["email"]."</p>";
-                                    header("Location:controllerAccount.php");
+                                    header("Location:/adrar/POO/MVC_POO/Account");
                                 } else{
                                     $messageConnexion = "Login et/ou Mot de Passe incorrect(s)";
                                 }
@@ -146,12 +146,13 @@
             $this->getViewHome()->setMessage($this->signUp());
             $this->getViewHome()->setMessageConnection($this->signIn());
             $this->getViewHome()->setUsersList($this->readUsers());
+            $this->getViewHeader()->setListLinks($this->modifyLinks());
 
             echo $this->getViewHeader()->displayView().$this->getViewHome()->displayView().$this->getViewFooter()->displayView();
         }
     }
 
-
-    $home = new ControllerHome(new ViewHome(), new ModelUser(), new ViewHeader(), new ViewFooter());
-    $home->render();
+    //A mettre dans le routeur après
+    // $home = new ControllerHome(new ViewHome(), new ModelUser(), new ViewHeader(), new ViewFooter());
+    // $home->render();
 ?>

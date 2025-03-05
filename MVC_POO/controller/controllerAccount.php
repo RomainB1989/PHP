@@ -1,10 +1,10 @@
 <?php
-    session_start();
+    // session_start();
 
-    include "./view/viewHeader.php";
-    include "./view/viewAccount.php";
-    include "./view/viewFooter.php";
-    include "./controllerGeneric.php";
+    // include "./view/viewHeader.php";
+    // include "./view/viewAccount.php";
+    // include "./view/viewFooter.php";
+    // include "./controllerGeneric.php";
 
 Class ControllerAccount extends ControllerGeneric{
 
@@ -27,12 +27,12 @@ Class ControllerAccount extends ControllerGeneric{
     }
     //METHOD
     public function render():void{
+        $this->getViewHeader()->setListLinks($this->modifyLinks());
         echo $this->getViewHeader()->displayView().$this->getViewAccount()->displayView().$this->getViewFooter()->displayView();
     }
 }
-
-    $account = new ControllerAccount(new ViewAccount(), new ViewHeader(), new ViewFooter());
-    //echo "Test<br>";
-    $account->render();
+    //A mettre dans le routeur après
+    // $account = new ControllerAccount(new ViewAccount(), new ViewHeader(), new ViewFooter());
+    // $account->render();
 
 ?>

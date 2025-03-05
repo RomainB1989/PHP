@@ -2,6 +2,17 @@
 
 
     Class ViewHeader{
+        private ?string $listLinks = "";
+
+        public function getListLinks(): string{
+            return $this->listLinks;
+        }
+
+        public function setListLinks(string $newListLinks): ViewHeader{
+            $this->listLinks = $newListLinks;
+            return $this;
+        }
+
         public function displayView(){
             return
             '
@@ -13,10 +24,11 @@
                     <title>MVC_POO-Extended</title>
                 </head>
                 <body>
-                    <header>
+                    <header style="background-color: blue; height: 100px; text-align: center; color: white;">
                         <nav>
-                            <a href="./controllerHome.php">Accueil</a>
-                            <a href="./controllerCategory.php">Categories</a>
+                            <a style="color: white;"  href="/adrar/POO/MVC_POO/Accueil">Accueil</a>
+                            <a style="color: white;"  href="/adrar/POO/MVC_POO/Category">Categories</a>
+                            '.$this->getListLinks().'
                         </nav>
                     </header>
             ';
