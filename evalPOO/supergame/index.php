@@ -61,6 +61,7 @@
         //METHOD
         public function signUp():string{
             $message = "";
+            // print_r($_POST);
             if (!empty($_POST))
             {
                 //verifie si submit du formulaire de creation de compte Utilisateur existe
@@ -75,6 +76,7 @@
                             //echo "<p>Votre email a le bon format.</p>";
                             // Clean les Données.
                             // Password chiffrer
+                            // echo "<p>Pseudo : ".$_POST["pseudo"]."</p>";
                             $this->getManagerPlayer()->setPseudo(sanitize($_POST["pseudo"]));
                             $this->getManagerPlayer()->setEmail(sanitize($_POST["email"]));
                             $this->getManagerPlayer()->setScore($_POST["score"]);
@@ -102,7 +104,6 @@
         public function readUsers():string{
             $usersList = "";
             //recupere ManagerPlayer->getall();
-            echo $this->getManagerPlayer()->getEmail();
             $listUsers = $this->getManagerPlayer()->getPlayers();
             //print_r($listUsers);
             //recuper code boucle foreach de li a mettre dans ul

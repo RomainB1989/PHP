@@ -14,8 +14,6 @@ Class ManagerPlayer extends ModelPlayer{
         $score = $this->getScore();
         $password = $this->getPassword();
         try {
-
-            // echo "<p>Connexion réussie à la base de données !</p>";
             // Requête SQL pour sélectionner tous les utilisateurs
             //  1) méthode prepare()
             $req = $this->getBdd()->prepare("INSERT INTO players (pseudo, email, score, psswrd) VALUES (?,?,?,?)");

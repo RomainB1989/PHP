@@ -2,12 +2,12 @@
 //MODEL POUR LA TABLE JOUEURS
 Class ModelPlayer{
     //ATTRIBUTE
-    private ?int $id = null;
-    private ?string $pseudo;
+    private ?int $id;
+    private string $pseudo = "";
     
-    private ?string $email = null;
-    private ?int $score = null;
-    private ?string $password = null;
+    private string $email = "";
+    private ?int $score;
+    private string $password = "";
 
     private ?PDO $bdd;
     
@@ -21,11 +21,11 @@ Class ModelPlayer{
         return $this->id;
     }
 
-    public function getPseudo(): ?string{
+    public function getPseudo(): string{
         return $this->pseudo;
     }
 
-    public function getEmail(): ?string{
+    public function getEmail(): string{
         return $this->email;
     }
 
@@ -33,7 +33,7 @@ Class ModelPlayer{
         return $this->score;
     }
 
-    public function getPassword(): ?string{
+    public function getPassword(): string{
         return $this->password;
     }
 
@@ -51,7 +51,7 @@ Class ModelPlayer{
     }
 
     public function setPseudo(string $newPseudo): ModelPlayer{
-        $this->nickname = $newPseudo;
+        $this->pseudo = $newPseudo;
         return $this;
     }
 

@@ -37,7 +37,7 @@ Class ViewHome{
             <section>
                 <form action="" method="post" style="border: solid 3px black; width: 20%; margin: 0 auto; padding: 10px 10px; margin: 10px 10px; display:flex; flex-direction:column;">
                     <h2 style="text-align:center;">Inscrivez vous !</h2>
-                    <p>Votre Nom :</p>
+                    <p>Votre Pseudo :</p>
                     <input type="text" name="pseudo"  required>
                     <p>Votre Adresse Email : </p>
                     <input type="email" name="email"  required>
