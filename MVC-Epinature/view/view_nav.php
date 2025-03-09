@@ -22,17 +22,18 @@
             </li>
             <li class="deroulant">
                 <a href="./controller_boutique.php">Nos Produits</a>
-                <ul class="sous-menu">
+                <!-- <ul class="sous-menu">
                     <li><a href="#">Nos Pains</a></li>
                     <li><a href="#">Nos Douceurs</a></li>
                     <li><a href="#">Anciens Produits</a></li>
-                </ul>
+                </ul> -->
             </li>
             <li class="deroulant">
-                <a href="./controller_creation-connection.php">Mon Compte</a>
+                <a href="#">Mon Compte</a>
                 <ul class="sous-menu">
-                    <li><a href="./Front-End/infos.php">Mes Infos</a></li>
-                    <li><a href="./Front-End/commandes.php">Mes Commandes</a></li>
+                    <!-- <li><a href="./controller_creation.php">Créer un Compte</a></li> -->
+                    <!-- <li><a href="./controller_connection.php">Connexion</a></li> -->
+                    <?= $linkNav ?>
                 </ul>
             </li>
             <li class="deroulant">
@@ -61,7 +62,7 @@
                 <img src="./src/Images/Icon-Menu-Basket.png" width="auto" height="40px" alt="Icon Panier"  id="icon-basket">
             </li>
             <li class="icon-menu" id="icon-account">
-                <a href="./controller_creation-connection.php">
+                <a href="./controller_connection.php">
                     <img src="./src/Images/Icon-Account.png" width="auto" height="40px" alt="Icon Compte">
                 </a>
             </li>
@@ -89,9 +90,7 @@
                 <li><a href="./controller_ou-nous-trouver.php">Ou Nous Trouver ?</a></li>
                 <li><a href="./controller_contact.php">Nous Contacter !</a></li>
                 <li><a href="./controller_partenaires.php">Nos Partenaires</a></li>
-                <li><a href="./controller_boutique.php">Nos Pains</a></li>
-                <li><a href="./controller_boutique.php">Nos Douceurs</a></li>
-                <li><a href="./controller_boutique.php">Nos Anciens Produits</a></li>
+                <li><a href="./controller_boutique.php">Nos Produits</a></li>
                 <li><a href="./controller_gazette.php">La Gazette du Boulanger</a></li>
             </ul>
         </ul>

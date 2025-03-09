@@ -6,8 +6,8 @@ const regexPassword = /^[A-Za-z0-9$&+,:;=?@#|'<>.-^*()%!]{10,30}$/;
 
 // Récupération des éléments de champ de texte des formulaires
 const formCreate = document.querySelector("#create");
-const createNom = formCreate.querySelector("#nom");
-const createPrenom = formCreate.querySelector("#prenom");
+const createNom = formCreate.querySelector("#firstname");
+const createPrenom = formCreate.querySelector("#lastname");
 const createPhone= formCreate.querySelector("#tel");
 const createEmail = formCreate.querySelector("#email");
 const createPassword = formCreate.querySelector("#passwordCreate");
@@ -16,7 +16,6 @@ const createPassword2 = formCreate.querySelector("#createConfirm");
 const formConnect = document.querySelector("#connect");
 const connectEmail = formConnect.querySelector("#emailConnect");
 const connectPassword = formConnect.querySelector("#passwordConnect");
-const connectPassword2 = formConnect.querySelector("#connectConfirm");
 
 
 /**
@@ -97,14 +96,14 @@ connectPassword.addEventListener("keyup", function(){
     checkRegex(connectPassword, regexPassword);
 });
 
-connectPassword2.addEventListener("keyup", function(){
+// connectPassword2.addEventListener("keyup", function(){
 
-    if(regexPassword.test(connectPassword2.value) && checkpassword(connectPassword,connectPassword2)){
-        connectPassword2.style.backgroundColor = "#90ee90";
-    } else {
-        connectPassword2.style.backgroundColor = "#FF7276";
-    }
-});
+//     if(regexPassword.test(connectPassword2.value) && checkpassword(connectPassword,connectPassword2)){
+//         connectPassword2.style.backgroundColor = "#90ee90";
+//     } else {
+//         connectPassword2.style.backgroundColor = "#FF7276";
+//     }
+// });
 
 
 formCreate.addEventListener("submit", function(){
