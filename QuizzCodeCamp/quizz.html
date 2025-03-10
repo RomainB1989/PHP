@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizzCodeCamp - Apprendre en s'amusant !</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Css -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./quizz.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html" target="_self" id="indexLink">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Logo QuizzCodeCamp" width="160px" height="160px">
+                <h1><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</h1>
+            </div>
+        </a>
+        <div class="search-container">
+            <label for="search" class="search-label"><img src="./images/Loop-Icon.png" alt="Icon Loop" class="icon-search"></label>         
+            <input type="text" placeholder="Recherchez..." class="search-input" size="40" id="search"> 
+        </div>
+        <div class="account">
+            <img src="./images/Icon Compte.png" alt="Icon Compte" class="icon-account">
+            <a href="#">
+                <img src="./images/bar-chart-50.png" alt="icon-stats" width="80px" height="80px">
+            </a>    
+        </div>
+        <div class="box-account">
+            <a href="./connexionCompte.html" class="link">Se connecter</a>
+            <a href="./creationCompte.html" class="link">Créer mon compte</a>
+        </div>
+    </header>
+    <main id="quizz">
+        <div class="box-quizz">
+            <div class="question-count">Question 1 / 20</div>
+            <p class="question">Combien de fois Jean mange en moyenne par jour ses crotte de nez ?</p>
+            <div class="box-answer">
+                <div class="answer" id="answer-1"><span class="id-answer">A</span>Deux Fois par Jour.</div>
+                <div class="answer" id="answer-2"><span class="id-answer">B</span>Cinq Fois par Jour.</div>
+                <div class="answer" id="answer-3"><span class="id-answer">C</span>Dix Fois par Jour.</div>
+                <div class="answer" id="answer-4"><span class="id-answer">D</span>Jamais !</div>
+            </div>
+            <input type="submit" id="submit" value="Valider">
+        </div>
+        <div class="resultQuizz">
+            <p class="message-result">Vous avez répondu juste à 5 questions sur 20.</p>
+            <div class="stats-quizz">
+                <div class="stat">
+                    <div class="circle">20%</div>
+                    <p>Taux de reussite :</p>
+                </div>
+                <div class="stat">
+                    <div class="circle">74%</div>
+                    <p>Moyenne des Joueurs :</p>
+                </div>
+            </div>
+            <p class="message-compare">Oups... Vous ferez mieux au prochain Quiz !</p>
+            <input type="submit" id="reload" value="Recommençez le Quizz">
+        </div>
+        <h2 class="commentary-title">Commentaires :</h2>
+        <div class="commentary-box">
+            <div class="add-comment-box">
+                <img src="./images/sonic-gollum.jpg" alt="" class="img-user" width="50px" height="auto">
+                <div>
+                    <div class="add-comment">
+                        <p class="pseudo">DeadSpaguettis</p> 
+                        <p class="date-message">Il y a une heure</p>
+                    </div>
+                    <textarea name="commentary" id="commentary" placeholder="Ajouter votre commentaire..."></textarea>
+                    <div class="option-comment">
+                        <input type="submit" value="Annuler" id="delete">
+                        <input type="submit" value="Ajouter un Commentaire" id="confirm">
+                    </div>
+                </div>
+            </div>
+            <div class="read-comment">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><a href="./index.html" target="_self" class="link"><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</a> <span class="corporate">©</span> 2025 by TheHatefulThree.</p>
+    </footer>
+    <script src="./menu.js"></script>
+    <script src="./quizz.js" type="module"></script>
+</body>
+</html>
