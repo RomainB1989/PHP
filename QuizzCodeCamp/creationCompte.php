@@ -10,24 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Css -->
     
-    <link rel="stylesheet" href="creationCompte.css">
+    <link rel="stylesheet" href="./source/css/creationCompte.css">
+    <link rel="stylesheet" href="./source/css/style.css">
+
 </head>
 <body>
     <header>
         <a href="./index.html" target="_self" id="indexLink">
             <div class="logo">
-                <img src="./images/logo.png" alt="Logo QuizzCodeCamp" width="160px" height="160px">
+                <img src="./source/images/logo.png" alt="Logo QuizzCodeCamp" width="160px" height="160px">
                 <h1><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</h1>
             </div>
         </a>
         <div class="search-container">
-            <label for="search" class="search-label"><img src="./images/Loop-Icon.png" alt="Icon Loop" class="icon-search"></label>         
+            <label for="search" class="search-label"><img src="./source/images/Loop-Icon.png" alt="Icon Loop" class="icon-search"></label>         
             <input type="text" placeholder="Recherchez..." class="search-input" size="40" id="search"> 
         </div>
         <div class="account">
-            <img src="./images/Icon Compte.png" alt="Icon Compte" class="icon-account">
+            <img src="./source/images/Icon Compte.png" alt="Icon Compte" class="icon-account">
             <a href="#">
-                <img src="./images/bar-chart-50.png" alt="icon-stats" width="80px" height="80px">
+                <img src="./source/images/bar-chart-50.png" alt="icon-stats" width="80px" height="80px">
             </a>    
         </div>
         <div class="box-account">
@@ -40,11 +42,11 @@
             <h3>Créer mon compte</h3>
 
             <form action="" method="post" id="inscriptionForm">
-                <input type="text" id="firstName" name="firstname" minlength="2" placeholder="Prénom" required>
-                <input type="text" id="lastName" name="lastName" minlength="2" placeholder="Nom" required>
-                <input type="email" id="inscriptionEmail" name="email" placeholder="Email" required>
+                <input type="text" id="firstName" name="firstname_user" minlength="2" placeholder="Prénom" required>
+                <input type="text" id="lastName" name="lastname_user" minlength="2" placeholder="Nom" required>
+                <input type="email" id="inscriptionEmail" name="email_user" placeholder="Email" required>
                 <p id="messageMail"></p>
-                <input type="password" id="inscriptionPassword" name="password" minlength="8" placeholder="Mot de passe" required>
+                <input type="password" id="inscriptionPassword" name="mdp_user" minlength="8" placeholder="Mot de passe" required>
                 <p id="messagePassword"></p>
                 <label for="photoInscription" class="custom-file">Choisissez votre avatar</label>
                 <input type="file" id="photoInscription" accept=".png, .jpg, .gif" name="photo">
@@ -54,7 +56,7 @@
                 
 
                 <div id="containerInscriptionButton">
-                    <button type="submit" value="valider" id="inscriptionButton">Valider le compte</button>
+                    <button type="submit" value="valider" id="inscriptionButton" name="submitSubscribe">Valider le compte</button>
                 </div>
             </form>
         </div>
@@ -62,7 +64,8 @@
     <footer>
         <p><a href="./index.html" target="_self" class="link"><span class="red">Q</span>uizz<span class="green">C</span>odeCa<span class="blue">m</span>p</a> <span class="corporate">©</span> 2025 by TheHatefulThree.</p>
     </footer>
-    <script src="./menu.js"></script>
-    <script src="creationCompte.js"></script>
+    <script src="./source/js/menu.js"></script>
+    <script src="./source/js/creationCompte.js"></script>
+    <script src="./source/js/apiSubscribe.js"></script>
 </body>
 </html>
