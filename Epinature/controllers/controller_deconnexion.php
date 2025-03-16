@@ -3,6 +3,6 @@
     session_destroy();
 
     //redirection sur page1
-    header("Location:controller_accueil.php");
-
+    header("Location: /adrar/Epinature/accueil");
+    exit();
 ?>

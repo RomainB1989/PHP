@@ -5,7 +5,7 @@
             <h3>REJOIGNEZ NOUS</h3>
             <form id="create" method="POST" action="">
                 <p><span>*</span> = Information requise</p>
-                <p>Vous avez déjà un compte ? <a href="./controller_connexion.php">Connectez-vous</a></p>
+                <p>Vous avez déjà un compte ? <a href="/adrar/Epinature/connexion">Connectez-vous</a></p>
                 <div>
                     <label for="lastname">Nom : <span>*</span></label>
                     <input type="text" name="lastname" id="lastname" placeholder="Ex: Jean" pattern="^[A-Za-z]{1,20}$" required>

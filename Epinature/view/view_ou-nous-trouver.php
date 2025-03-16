@@ -3,7 +3,7 @@
             <h3>Ou Nous Trouver ?</h3>
             <p>
                 <ul>
-                    <li>créer un compte «<a href="./controller_creation-connection.php">mangeur-se de pain</a> »</li>
+                    <li>créer un compte «<a href="/adrar/Epinature/creation">mangeur-se de pain</a> »</li>
                     <li>définir un point de livraison</a> parmi la liste ci-dessous</li>
                     <li>choisir d'être livré une seule fois (pour goûter !) ou de s'abonner  (1 mois / 3 mois / 6 mois / 11 mois) avec la possibilité de changer de pain chaque semaine et de suspendre votre abonnement temporairement.</li>
                 </ul>

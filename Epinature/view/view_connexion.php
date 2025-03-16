@@ -5,7 +5,7 @@
             <h3>CONNECTEZ VOUS</h3>
             <form id="connect" method="POST" action="">
                 <p><span>*</span> = Information requise</p>
-                <p>Vous n'avez pas de compte ? <a href="./controller_creation.php">Créer un compte</a></p>
+                <p>Vous n'avez pas de compte ? <a href="/adrar/Epinature/creation">Créer un compte</a></p>
                 <div>
                     <label for="emailConnect">Adresse Mail : <span>*</span></label>
                     <input type="email" name="email" id="emailConnect" placeholder="Ex: adresse@test.fr" pattern="^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$" required>

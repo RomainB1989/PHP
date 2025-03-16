@@ -15,13 +15,13 @@
                 <p class="important">L’ÉpiNature est une boulangerie coopérative spécialisée dans la fabrication de pains Bio au levain naturel et la distribution en circuit-court.</p>
                 <p>Tout est dit (ou presque) dans notre enseigne. Nous avons  pignon sur place (St-Jean) depuis le 18 juillet de l’année 2023 et déjà les connaisseurs et les passionnées nous ont repérés. C’est le goût du vrai et de la tradition qui nous inspire et que l’on souhaite partager avec  vous.</p>
                 <p class="important">Devenons co-pain !</p>
-                <button type="button" onclick="window.location.href='./controller_presentation.php';" >En Savoir Plus !</button>
+                <button type="button" onclick="window.location.href='/adrar/Epinature/presentation';" >En Savoir Plus !</button>
             </article>
             <img src="./src/Images/Fournil-Pain2-mini.jpg" alt="Photo Pain juste avant Cuisson au Four" class="responsive" width="472px" height="425px" >
         </div>
         <article class="boxInfo2">
             <p class="important">Pour ceux qui veulent nous rencontrer, vous pouvez nous retrouver sur de nombreux marchés du nord-est toulousain ainsi que de la vallée du Tarn. N’oubliez pas aussi nos nombreux points de livraisons dans Toulouse.</p>
-            <button type="button" onclick="window.location.href='./controller_ou-nous-trouver.php';" >En Savoir Plus !</button>
+            <button type="button" onclick="window.location.href='/adrar/Epinature/ou-nous-trouver';" >En Savoir Plus !</button>
         </article>
 
         <article class="boxText">

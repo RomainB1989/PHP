@@ -1,43 +1,70 @@
-const iconBurger = document.querySelector("#icon-burger");
 const iconBasket = document.querySelector("#icon-basket");
+const iconAccount = document.querySelector("#icon-account");
+const iconBurger = document.querySelector("#icon-burger");
+const menuBasket = document.querySelector(".menu-basket");
+const menuAccount = document.querySelector(".menu-account");
 const menuBurger = document.querySelector(".menu-burger");
-const basket = document.querySelector(".basket");
 const overlay = document.querySelector(".overlay");
 
-
 function changeIcon(icon, typeIcon){
-  // console.log(icon);
-  // if(icon.src == `/Images/Icon-Menu-${typeIcon}.png`)
-  // {
-  //   icon.src = "/Images/Icon-Menu-Close.png";
-  // }
-  // else if(icon.src == "*/Images/Icon-Menu-Close.png"){
-  //   icon.src = `/Images/Icon-Menu-${typeIcon}.png`;
-  //
-
-  //Ternaire pour transformer l'icone du bouton selectionné.
-  icon.src = icon.src.includes(`/Images/Icon-Menu-${typeIcon}.png`) 
-  ? `./src/Images/Icon-Menu-Close.png` 
-  : `./src/Images/Icon-Menu-${typeIcon}.png`;
-
+  // Change l'icone si elle existe et est active
+    if (icon && icon.src) {
+        icon.src = icon.src.includes(`Icon-Menu-${typeIcon}.png`) 
+        ? `/adrar/Epinature/src/Images/Icon-Menu-Close.png`
+        : `/adrar/Epinature/src/Images/Icon-Menu-${typeIcon}.png`;
+    }
 }
 
-iconBurger.addEventListener('click', function() {
-  if(basket.classList.contains('active'))
-  {
-    basket.classList.remove('active');
-    changeIcon(iconBasket, "Basket");
-  }
-  menuBurger.classList.toggle('active');
-  changeIcon(iconBurger, "Burger");
-});
+function closeAllMenus() {
+    // Ferme tous les menus si ils existe et sont actifs
+    if (menuBasket) menuBasket.classList.remove('active');
+    if (menuAccount) menuAccount.classList.remove('active');
+    if (menuBurger) menuBurger.classList.remove('active');
+    
+    // Réinitialise toutes les icônes si elles existent et sont actifs
+    if (iconBasket && iconBasket.src && !iconBasket.src.includes('Icon-Menu-Basket.png')) {
+        changeIcon(iconBasket, "Basket");
+    }
+    if (iconAccount && iconAccount.src && !iconAccount.src.includes('Icon-Menu-Account.png')) {
+        changeIcon(iconAccount, "Account");
+    }
+    if (iconBurger && iconBurger.src && !iconBurger.src.includes('Icon-Menu-Burger.png')) {
+        changeIcon(iconBurger, "Burger");
+    }
+}
 
 iconBasket.addEventListener('click', function() {
-  if(menuBurger.classList.contains('active'))
-    {
-      menuBurger.classList.remove('active');
-      changeIcon(iconBurger, "Burger");
+    if (menuBasket.classList.contains('active')) {
+        console.log("Je ferme le panier");
+        closeAllMenus();
+    } else {
+        console.log("Je deplis le panier");
+        closeAllMenus();
+        menuBasket.classList.add('active');
+        changeIcon(iconBasket, "Basket");
     }
-    basket.classList.toggle('active');
-    changeIcon(iconBasket, "Basket");
+});
+
+iconAccount.addEventListener('click', function() {
+    if (menuAccount.classList.contains('active')) {
+        console.log("Je ferme le menu Compte");
+        closeAllMenus();
+    } else {
+        console.log("Je deplis le menu Compte");
+        closeAllMenus();
+        menuAccount.classList.add('active');
+        changeIcon(iconAccount, "Account");
+    }
+});
+
+iconBurger.addEventListener('click', function() {
+    if (menuBurger.classList.contains('active')) {
+        console.log("Je ferme le menu Burger");
+        closeAllMenus();
+    } else {
+        console.log("Je deplis le menu Burger");
+        closeAllMenus();
+        menuBurger.classList.add('active');
+        changeIcon(iconBurger, "Burger");
+    }
 });

@@ -9,6 +9,7 @@ $route = str_replace($base_path, '', $request_uri);
 $route = strtok($route, '?');
 $route = trim($route, '/');
 
+
 // Default route
 if (empty($route)) {
     $route = 'accueil';
@@ -17,6 +18,8 @@ if (empty($route)) {
 // Define routes and their corresponding controllers
 $routes = [
     'accueil' => 'controllers/controller_accueil.php',
+    'account' => 'controllers/controller_account.php',
+    'account/infos' => 'controllers/controller_account_infos.php',
     'connexion' => 'controllers/controller_connexion.php',
     'deconnexion' => 'controllers/controller_deconnexion.php',
     'contact' => 'controllers/controller_contact.php',

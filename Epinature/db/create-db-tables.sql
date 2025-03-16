@@ -2,16 +2,22 @@ CREATE DATABASE IF NOT EXISTS epinature CHAR SET utf8mb4;
 
 USE epinature;
 
+CREATE TABLE IF NOT EXISTS category(
+	id_category INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    name_category VARCHAR(50) NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS products(
    product_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
    name_product VARCHAR(50) NOT NULL,
-   resume VARCHAR(100),
-   description VARCHAR(500) NOT NULL,
+   `resume` VARCHAR(100),
+   `description` VARCHAR(500) NOT NULL,
    ingredients VARCHAR(300) NOT NULL,
    price DECIMAL(7,2) NOT NULL,
    stock_number INT NOT NULL,
    is_available BOOL NOT NULL,
-   category_id INT NOT NULL
+   id_category INT NOT NULL,
+   CONSTRAINT fk_product_category FOREIGN KEY(id_category) REFERENCES category(id_category) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS location(

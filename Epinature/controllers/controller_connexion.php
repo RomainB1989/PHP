@@ -1,8 +1,7 @@
 <?php
-    session_start();
+    //session_start();
 
     include "./model/model_users.php";
-    include "./utils/utils.php";
 
 
     $styleLink = $scriptLink = $message = "";
@@ -40,8 +39,8 @@
                                 $_SESSION["email"] = $user[0]["email"];
                                 $_SESSION["phone"] = $user[0]["phone_number"];
                                 //echo "<p>".$_SESSION["lastname"]."</p>";
-                                //header("Location:controller_account.php");
-                                //header("Location:controller_accueil.php");
+                                //header("Location: /adrar/Epinature/account");
+                                header("Location: /adrar/Epinature/accueil");
                                 $message = "<p>Vous êtes connecté</p>";
                             } else{
                                 $message = "Login et/ou Mot de Passe incorrect(s)";

@@ -1,5 +1,5 @@
 Use epinature;
-INSERT INTO products (name_product, resume, description, ingredients, price, stock_number, is_available, category_id) VALUES
+INSERT INTO products (name_product, `resume`, `description`, ingredients, price, stock_number, is_available, id_category) VALUES
 ('Baguette Tradition', 'Baguette croustillante à l''ancienne', 'Une baguette traditionnelle à la croûte dorée et croustillante avec une mie aérée.', 'Farine de blé, eau, levure, sel', 1.20, 50, 1, 1),
 ('Pain aux Céréales', 'Pain riche en fibres et graines', 'Pain complet aux multiples céréales pour un petit-déjeuner équilibré.', 'Farine complète, graines (lin, tournesol, sésame), eau, levure, sel', 2.50, 30, 1, 1),
 ('Croissant au Beurre', 'Viennoiserie feuilletée au beurre', 'Croissant pur beurre, croustillant à l''extérieur et moelleux à l''intérieur.', 'Farine de blé, beurre, lait, sucre, levure, sel', 1.10, 40, 1, 2),

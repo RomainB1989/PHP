@@ -1,14 +1,17 @@
 <?php
 
+    // Initialisation de la variable
     $linkNav = "";
 
+    // Vérification de la session
     if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
-        $linkNav = $linkNav."<li><a href='./controller_account.php'>Mon Compte</a></li>";
-        $linkNav = $linkNav."<li><a href='./controller_deconnexion.php'>Déconnexion</a></li>";
+        $linkNav .= "<li><a href='/adrar/Epinature/account'>Mon Compte</a></li>";
+        $linkNav .= "<li><a href='/adrar/Epinature/deconnexion'>Déconnexion</a></li>";
     } else {
-        $linkNav = $linkNav."<li><a href='./controller_creation.php'>Créer un Compte</a></li>";
-        $linkNav = $linkNav."<li><a href='./controller_connexion.php'>Connexion</a></li>";
+        $linkNav .= "<li><a href='/adrar/Epinature/creation'>Créer un Compte</a></li>";
+        $linkNav .= "<li><a href='/adrar/Epinature/connexion'>Connexion</a></li>";
     }
 
-    include "./view/view_nav.php";
+    // On inclut la vue après avoir défini la variable
+    require_once "./view/view_nav.php";
 ?>

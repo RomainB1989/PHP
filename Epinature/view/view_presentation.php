@@ -16,27 +16,27 @@
             <h3>Nos Membres</h3>
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                    <img src="./src/Images/marie.jpeg">
+                    <img src="./src/Images/member/marie.jpeg">
                     <div class="memberName">Marie SEVENAS</div>
                 </div>
                 <div class="mySlides fade">
-                    <img src="./src/Images/jeremy.jpeg">
+                    <img src="./src/Images/member/jeremy.jpeg">
                     <div class="memberName">Jeremy LOUSERGUE</div>
                 </div>
                 <div class="mySlides fade">
-                    <img src="./src/Images/céline.jpeg">
+                    <img src="./src/Images/member/céline.jpeg">
                     <div class="memberName">Céline MELARD</div>
                 </div>
                 <div class="mySlides fade">
-                    <img src="./src/Images/pauline.jpeg">
+                    <img src="./src/Images/member/pauline.jpeg">
                     <div class="memberName">Pauline MAGOUX</div>
                 </div>
                 <div class="mySlides fade">
-                    <img src="./src/Images/bernard.jpeg">
+                    <img src="./src/Images/member/bernard.jpeg">
                     <div class="memberName">Bernard CHAMBLOIS</div>
                 </div>
                 <div class="mySlides fade">
-                    <img src="./src/Images/dorian.jpeg">
+                    <img src="./src/Images/member/dorian.jpeg">
                     <div class="memberName">Dorian BOULAIN</div>
                 </div>
                 <!-- Next and previous buttons -->

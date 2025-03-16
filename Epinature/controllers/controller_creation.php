@@ -1,7 +1,6 @@
 <?php
 
     include "./model/model_users.php";
-    include "./utils/utils.php";
 
 
     $styleLink = $scriptLink = $message = "";
@@ -39,7 +38,7 @@
                                 //Appel de la fonction qui ajoute un Utilisateur.
                                 //echo "<p>Votre compte à été rajouté :<br>Nom : ".$firstname."<br>Prénom : ".$lastname."<br>Email : ".$email."<br>Numéro de téléphone : ".$phone_number."</p>";
                                 $message = insertUser(connect(), $phone_number, $email, $firstname,$lastname, password_hash($_POST["passwordCreate"], PASSWORD_BCRYPT), 1);
-                                header("Location:controller_connexion.php");
+                                header("Location:/adrar/Epinature/connexion");
                             } else {
                                 $message = "<p>Un compte associé à cette adresse mail existe deja.";
                             }
