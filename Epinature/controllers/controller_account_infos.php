@@ -7,7 +7,7 @@
     $scriptLink = '<script src="/adrar/Epinature/view/script/formulary.js"></script>';
 
     // Vérifier si l'utilisateur est connecté, si non on le redirige vers la page de connexion
-    if(!isset($_SESSION['id'])) {
+    if(!isset($_SESSION['id_user'])) {
         header("Location: /adrar/Epinature/connexion");
         exit();
     }

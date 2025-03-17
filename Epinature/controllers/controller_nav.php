@@ -4,7 +4,7 @@
     $linkNav = "";
 
     // Vérification de la session
-    if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
+    if(isset($_SESSION["id_user"]) && !empty($_SESSION["id_user"])){
         $linkNav .= "<li><a href='/adrar/Epinature/account'>Mon Compte</a></li>";
         $linkNav .= "<li><a href='/adrar/Epinature/deconnexion'>Déconnexion</a></li>";
     } else {

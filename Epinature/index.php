@@ -28,7 +28,9 @@ $routes = [
     'ou-nous-trouver' => 'controllers/controller_ou-nous-trouver.php',
     'partenaires' => 'controllers/controller_partenaires.php',
     'presentation' => 'controllers/controller_presentation.php',
-    'creation' => 'controllers/controller_creation.php'
+    'creation' => 'controllers/controller_creation.php',
+    'boutique' => 'controllers/controller_boutique.php',
+    'produit' => 'controllers/controller_produit.php',
 ];
 
 // Check if route exists

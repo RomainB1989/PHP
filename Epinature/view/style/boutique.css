@@ -1,0 +1,104 @@
+#boutique {
+    text-align: center;
+    h1 {
+        font-size: var(--width-Title1);
+        color: var(--blackEarth);
+        margin-bottom: 1rem;
+    }
+    
+    h2 {
+        font-size: var(--width-Title2);
+        color: var(--darkBrick);
+        margin-bottom: 1rem;
+    }
+
+    hr{
+        display: flex;
+        align-self: center;
+        width: 60%;
+        margin: 20px auto;
+        height: 3px;
+        border: none;
+        color: var(--darkBrick);
+        background-color: var(--darkBrick);
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+    
+        .product-card {
+            background-color: var(--flour);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            .product-image {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .product-info {
+                padding: 1.5rem;
+                
+                h3 {
+                    font-size: var(--width-Title3);
+                    color: var(--darkBrick);
+                    margin-bottom: 0.5rem;
+                }
+
+                .product-resume {
+                    font-size: var(--width-Text);
+                    color: var(--blackEarth);
+                    margin-bottom: 1rem;
+                }
+                
+                .product-price {
+                    font-size: var(--width-TextImportant);
+                    color: var(--darkBrick);
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+                
+                button{
+                    width: 200px;
+                    margin: 10px 0px;
+                    padding: 5px 25px;
+                    font-family: Pangolin;
+                    font-size: var(--width-Text);
+                    border: solid var(--blackEarth);
+                    background-color: var(--breadPasta);
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+                }
+    
+                button:hover{
+                    color: var(--goldWheat);
+                    background-color: var(--darkBrick);
+                }
+            }
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 940px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+} 

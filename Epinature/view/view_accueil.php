@@ -17,7 +17,7 @@
                 <p class="important">Devenons co-pain !</p>
                 <button type="button" onclick="window.location.href='/adrar/Epinature/presentation';" >En Savoir Plus !</button>
             </article>
-            <img src="./src/Images/Fournil-Pain2-mini.jpg" alt="Photo Pain juste avant Cuisson au Four" class="responsive" width="472px" height="425px" >
+            <img src="./src/Images/partenaires/Fournil-Pain2-mini.jpg" alt="Photo Pain juste avant Cuisson au Four" class="responsive" width="472px" height="425px" >
         </div>
         <article class="boxInfo2">
             <p class="important">Pour ceux qui veulent nous rencontrer, vous pouvez nous retrouver sur de nombreux marchés du nord-est toulousain ainsi que de la vallée du Tarn. N’oubliez pas aussi nos nombreux points de livraisons dans Toulouse.</p>

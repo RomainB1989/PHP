@@ -4,7 +4,7 @@ $styleLink = $scriptLink = "";
 
 $styleLink = '<link rel="stylesheet" href="./view/style/account.css">';
 
-if(isset($_SESSION['id'])){
+if(isset($_SESSION['id_user'])){
     $user['prenom'] = $_SESSION['firstname'];
     $user['nom'] = $_SESSION['lastname'];
 }

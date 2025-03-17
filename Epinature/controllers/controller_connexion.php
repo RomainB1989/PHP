@@ -32,7 +32,7 @@
 
                         if(!empty($user)){
                             if(password_verify($password, $user[0]["password"])){
-                                $_SESSION["id"] = $user[0]["user_id"];
+                                $_SESSION["id_user"] = $user[0]["user_id"];
                                 $_SESSION["id_role"] = $user[0]["id_role"];
                                 $_SESSION["lastname"] = $user[0]["lastname"];
                                 $_SESSION["firstname"] = $user[0]["firstname"];

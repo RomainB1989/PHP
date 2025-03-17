@@ -52,7 +52,7 @@
         
         <ul class="menu-mobile">   <!-- Menu Deroulant en Version Mobile -->
             <li class="icon-menu">
-                <img src="/adrar/Epinature/src/Images/Icon-Menu-Basket.png" width="auto" height="40px" alt="Icon Panier"  id="icon-basket">
+                <img src="/adrar/Epinature/src/Images/Icon-Menu-Basket.svg" width="auto" height="40px" alt="Icon Panier"  id="icon-basket">
             </li>
             <ul class="menu-basket">
                     <li>
@@ -72,7 +72,7 @@
             </ul>
 
             <li class="icon-menu">
-                <img src="/adrar/Epinature/src/Images/Icon-Menu-Account.png" width="auto" height="40px" alt="Icon Espace Compte" id="icon-account">
+                <img src="/adrar/Epinature/src/Images/Icon-Menu-Account.svg" width="auto" height="40px" alt="Icon Espace Compte" id="icon-account">
             </li>
             <ul class="menu-account">
                 <?php
@@ -88,7 +88,7 @@
             </ul>
 
             <li class="icon-menu">
-                <img src="/adrar/Epinature/src/Images/Icon-Menu-Burger.png" width="auto" height="40px" alt="Icon Menu Burger" id="icon-burger">
+                <img src="/adrar/Epinature/src/Images/Icon-Menu-Burger.svg" width="auto" height="40px" alt="Icon Menu Burger" id="icon-burger">
             </li>
             <ul class="menu-burger">
                 <li><a href="/adrar/Epinature/presentation">Présentation</a></li>
