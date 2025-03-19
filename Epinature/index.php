@@ -46,7 +46,7 @@ if (array_key_exists($route, $routes)) {
         //Check si fichier à deja était inclus, sinon inclus de toute façon.
         require_once $controller_file;
     } else {
-        // Controller file not found
+        // fichier controller associé non trouvé -> 404
         header("HTTP/1.0 404 Not Found");
         include 'view/404.php';
     }
