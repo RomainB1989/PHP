@@ -9,6 +9,12 @@
                 <a href="/adrar/Epinature/accueil" target="_self">Accueil</a>
             </li>
             <li class="deroulant">
+                <a href="#">Mon Panier</a>
+                <ul class="panier">
+                    <?= $listBasket ?>
+                </ul>
+            </li>
+            <li class="deroulant">
                 <a href="#">Nous Découvrir !</a>
                 <ul class="sous-menu">
                     <li><a href="/adrar/Epinature/presentation">Présentation</a></li>
@@ -29,25 +35,6 @@
                     <?= $linkNav ?>
                 </ul>
             </li>
-            <li class="deroulant">
-                <a href="#">Mon Panier</a> 
-                <ul class="panier"> <!-- Menu Deroulant en Version Desktop et Tablette -->
-                    <li>
-                        <div class="min-panier">
-                            <p>2</p>
-                            <p>Boule de Campagne</p>
-                            <img src="/adrar/Epinature/src/Images/Icon-Delete.png" alt="Icon-Croix">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="min-panier">
-                            <p>1</p>
-                            <p>Troué</p>
-                            <img src="/adrar/Epinature/src/Images/Icon-Delete.png" alt="Icon-Croix">
-                        </div>
-                    </li>
-            </ul>
-            </li>
         </ul>
         
         <ul class="menu-mobile">   <!-- Menu Deroulant en Version Mobile -->
@@ -55,20 +42,7 @@
                 <img src="/adrar/Epinature/src/Images/Icon-Menu-Basket.svg" width="auto" height="40px" alt="Icon Panier"  id="icon-basket">
             </li>
             <ul class="menu-basket">
-                    <li>
-                        <div class="min-basket">
-                            <p>2</p>
-                            <p>Boule de Campagne</p>
-                            <img src="/adrar/Epinature/src/Images/Icon-Delete.png" alt="Icon-Croix" class="icon-Delete">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="min-basket">
-                            <p>1</p>
-                            <p>Le Troué</p>
-                            <img src="/adrar/Epinature/src/Images/Icon-Delete.png" alt="Icon-Croix" class="icon-Delete">
-                        </div>
-                    </li>
+                <?= $listBasket ?>
             </ul>
 
             <li class="icon-menu">

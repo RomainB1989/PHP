@@ -20,5 +20,7 @@
     </footer>
     <!-- Liens Js -->
     <script src="./view/script/accueil.js"></script>
+    <script type="module" src="./view/script/produit.js"></script>
+
     <?=$scriptLink; ?>
 </body>

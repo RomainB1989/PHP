@@ -23,6 +23,42 @@
         background-color: var(--darkBrick);
     }
 
+    #category-select{
+        width: auto;
+        margin: 10px 0px;
+        padding: 5px 25px;
+        font-family: var(--Roboto);
+        font-weight: bold;
+        font-size: var(--width-Text);
+        border: solid var(--blackEarth);
+        background-color: var(--breadPasta);
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+        appearance: none;
+        cursor: pointer;
+        
+        /* Style pour les options */
+        option {
+            background-color: var(--breadPasta);
+            font-family: var(--Gabarito);
+            font-weight: bold;
+            color: var(--blackEarth);
+            padding: 10px;
+        }
+        
+        /* Effet de zoom et changement de couleur au survol des options */
+        option:hover {
+            color: var(--goldWheat);
+            transform: scale(1.2);
+        }
+    }
+
+    /* Ajout d'un style au survol */
+    #category-select:hover {
+        background-color: var(--flour);
+    }
+
+
     .products-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -95,10 +131,24 @@
 
 
 /* Responsive Design */
-@media screen and (max-width: 940px) {
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1rem;
-        padding: 1rem;
+@media screen and (min-width:300px) and (max-width:550px){
+    #boutique{
+        width: 90%;
+        .products-grid {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
     }
-} 
+}
+
+@media screen and (min-width:550px) and (max-width:940px){
+    #boutique{
+        width: 95%;
+        .products-grid {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+    }
+}

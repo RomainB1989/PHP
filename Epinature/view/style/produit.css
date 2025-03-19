@@ -35,17 +35,20 @@
                 .category {
                     font-size: var(--width-Text);
                     color: var(--darkBrick);
+                    font-family: var(--Roboto);
                 }
             }
             
             .product-info {
                 .resume {
+                    font-family: var(--Roboto);
                     font-size: var(--width-TextImportant);
                     color: var(--darkBrick);
                     margin-bottom: 1rem;
                 }
                 
                 .description {
+                    font-family: var(--Roboto);
                     font-size: var(--width-Text);
                     color: var(--blackEarth);
                     margin-bottom: 2rem;
@@ -65,52 +68,73 @@
                     }
                     
                     p {
+                        font-family: var(--Roboto);
                         font-size: var(--width-Text);
                         color: var(--blackEarth);
                     }
                 }
                 
                 .purchase-info {
-                    .price {
-                        font-size: var(--width-TextImportant);
-                        color: var(--darkBrick);
-                        font-weight: bold;
-                        margin-bottom: 1rem;
-                    }
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     
-                    .quantity-selector {
+                    .box-price {
                         display: flex;
-                        align-items: center;
-                        gap: 1rem;
-                        margin-bottom: 1.5rem;
-                        
-                        input {
-                            width: 60px;
-                            text-align: center;
-                            padding: 0.5rem;
-                            border: 1px solid var(--darkBrick);
-                            border-radius: 4px;
+                        justify-content: space-evenly;
+                        width: 100%;
+                        padding: 20px 0px;
+
+                        .price {
+                            font-size: var(--width-Title2);
+                            color: var(--blackEarth);
+                            font-weight: bold;
+                            margin-bottom: 1rem;
                         }
                         
-                        .quantity-btn {
-                            padding: 0.5rem 1rem;
-                            background-color: var(--darkBrick);
-                            color: var(--flour);
-                            border: none;
-                            border-radius: 4px;
-                            cursor: pointer;
+                        .quantity-selector {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            margin-bottom: 1.5rem;
                             
-                            &:hover {
-                                background-color: var(--darkBrick2);
+                            input {
+                                width: 60px;
+                                text-align: center;
+                                padding: 0.5rem;
+                                border: 1px solid var(--darkBrick);
+                                border-radius: 4px;
+                            }
+                            
+                            .quantity-btn {
+                                padding: 0.5rem 1rem;
+                                background-color: var(--darkBrick);
+                                color: var(--flour);
+                                border: none;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                
+                                &:hover {
+                                    background-color: var(--darkBrick2);
+                                }
                             }
                         }
                     }
                     
+                    #messageApi{
+                        display: flex;
+                        justify-content: center;
+                        font-family: Pangolin;
+                        font-size: var(--width-Title3);
+                    }
+
                     .add-to-cart {
-                        width: 100%;
+                        width: 60%;
+                        display: flex;
+                        justify-content: center;
                         padding: 1rem;
                         font-family: Pangolin;
-                        font-size: var(--width-Text);
+                        font-size: var(--width-Title3);
                         background-color: var(--breadPasta);
                         border: solid var(--blackEarth);
                         border-radius: 20px;
@@ -129,8 +153,9 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 940px) {
+@media screen and (min-width:300px) and (max-width:940px) {
     #produit {
+        width:90%;
         .product-container {
             flex-direction: column;
             
@@ -140,6 +165,11 @@
             
             .product-details {
                 padding: 0 1rem;
+            }
+
+            .box-price{
+            flex-direction: column;
+            align-items: center;
             }
         }
     }

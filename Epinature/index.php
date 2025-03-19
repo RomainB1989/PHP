@@ -1,21 +1,26 @@
 <?php
 session_start();
+
 require_once __DIR__ . '/utils/utils.php';
 
-// Get the requested URL
+// Je recupère l'URI ce cette page.
 $request_uri = $_SERVER['REQUEST_URI'];
+// Je récupère l'arboresence de localhost jusqu'a la racine de mon projet.
 $base_path = dirname($_SERVER['SCRIPT_NAME']);
+// J'enleve tous le $_SERVER['SCRIPT_NAME'] en le remplaçant par rien. 
 $route = str_replace($base_path, '', $request_uri);
+// je nettoie les variables dans l'url de $_GET
 $route = strtok($route, '?');
+// je nettois les slash en debut et fin de chaine de caractères.
 $route = trim($route, '/');
 
 
-// Default route
+// Route par défault.
 if (empty($route)) {
     $route = 'accueil';
 }
 
-// Define routes and their corresponding controllers
+// Définition de toutes routes par leur nom ayant pour valeur le fichier controlleur
 $routes = [
     'accueil' => 'controllers/controller_accueil.php',
     'account' => 'controllers/controller_account.php',
@@ -33,10 +38,12 @@ $routes = [
     'produit' => 'controllers/controller_produit.php',
 ];
 
-// Check if route exists
+// Vérification Si la page existe dans mon tableau. Sinon redirection vers Page 404.
 if (array_key_exists($route, $routes)) {
+    // Récupération de l'arborescence du fichier controlleur associé.
     $controller_file = $routes[$route];
     if (file_exists($controller_file)) {
+        //Check si fichier à deja était inclus, sinon inclus de toute façon.
         require_once $controller_file;
     } else {
         // Controller file not found

@@ -141,13 +141,15 @@ header{
             .panier {
                 right: 0;
                 width: 300px;
+                border: solid 5px var(--blackEarth);
+                border-radius: 10px;
 
                 li {
                     color: var(--blackEarth);
                     display: flex;
                     flex-direction: column;
 
-                    .min-panier {
+                    .min-basket {
                         padding: 10px;
                         display: flex;
                         justify-content: space-evenly;

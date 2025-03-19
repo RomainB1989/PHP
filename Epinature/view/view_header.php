@@ -5,8 +5,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf8">
-    <meta name="description" content="Page Acceuil">
+    <meta charset="utf-8">
+    <meta name="description" content="Page Accueil">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'EpiNature - Accueil</title>
     <!-- Fiches CSS -->

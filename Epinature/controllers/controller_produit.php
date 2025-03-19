@@ -1,6 +1,6 @@
 <?php
     include "./model/model_products.php";
-
+    //unset($_SESSION["basket"]);
     $styleLink = $scriptLink = "";
     
     $styleLink = '<link rel="stylesheet" href="./view/style/produit.css">';
