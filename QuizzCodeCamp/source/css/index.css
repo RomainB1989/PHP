@@ -17,38 +17,41 @@
 
     .quizzList{
         margin: 50px;
-        display: flex;
-        flex-direction: column;
         padding: 20px 0px;
         
         .quizz{
             width: auto;
             height: auto;
             margin: 20px 0px;
-            padding: 10px 10px;
-            background-color: lightgrey;
+            padding: 5px 5px;
+            background-color: #D2B8B8;;
             color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-items: center;
             border: solid 4px black;
             border-radius: 10px;
+            font-family: 'Roboto';
+            list-style: none;
+            display: flex;
+            align-content: center;
+            img{
+                width: 120px;
+                height: 120px;
+                border-radius: 10px;
+                float: left;
+            }
 
-            h3{
-                text-align: center;
-                padding: 5px 10px;
+            a{
+                color: black;
+                text-decoration: none;
+            }
+
+            h2{
+                text-align: left;
+                margin-left: 130px;
+                
             }
 
             p{
-                text-align: center;
-            }
-
-
-            button{
-                padding: 10px 20px;
-                border: solid 4px black;
-                border-radius: 10px;
+                margin-left: 130px;
             }
         }
 

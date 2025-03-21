@@ -30,7 +30,22 @@
             </a>    
         </div>
         <div class="box-account">
-            <a href="./controllerConnexionCompte.php" class="link">Se connecter</a>
-            <a href="./controllerCreationCompte.php" class="link">Créer mon compte</a>
+            <a href="./deco.php" class="linkCo">Se déconnecter</a>
+            <a href="./connexionCompte.php" class="link">Se connecter</a>
+            <a href="./controllerCompteUtilisateurStat.php" class="linkCo">Mon compte</a>
+            <a href="./creationCompte.php" class="link">Créer mon compte</a>
         </div>
     </header>
+
+    <?php
+    if (isset($_SESSION["id_user"])) {
+        echo "<style>.link {
+            display: none;
+        }</style>";
+        
+    }else{
+        echo "<style>.linkCo {
+            display: none;
+        }</style>";
+    }
+    ?>

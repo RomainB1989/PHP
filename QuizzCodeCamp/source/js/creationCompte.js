@@ -7,19 +7,19 @@ const messageMail = document.querySelector('#messageMail');
 const messagePassword = document.querySelector('#messagePassword');
 const form = document.querySelector('#inscriptionForm')
 
-const regexNom = /^[A-Za-zÀ-ÿ\- ]{2,}$/;
-const regexMail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
-const regexPassword = /^(?=.*[$&@!]).{7,}$/;
+const regexNomCreation = /^[A-Za-zÀ-ÿ\- ]{2,}$/;
+const regexMailCreation = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
+const regexPasswordCreation = /^(?=.*[$&@!]).{7,}$/;
 
 firstName.addEventListener('keyup', ()=>{
-    if(regexNom.test(firstName.value)){
+    if(regexNomCreation.test(firstName.value)){
         firstName.style.border = 'solid 3px green'
     }else{
         firstName.style.border = 'solid 3px red'
     }
 })
 lastName.addEventListener('keyup', ()=>{
-    if(regexNom.test(lastName.value)){
+    if(regexNomCreation.test(lastName.value)){
         lastName.style.border = 'solid 3px green'
     }else{
         lastName.style.border = 'solid 3px red'
@@ -28,7 +28,7 @@ lastName.addEventListener('keyup', ()=>{
 
 email.addEventListener('keyup', ()=>{
     
-    if(regexMail.test(email.value)){
+    if(regexMailCreation.test(email.value)){
         email.style.border = 'solid 3px green'
         messageMail.style.display = 'none'
     } else{
@@ -40,7 +40,7 @@ email.addEventListener('keyup', ()=>{
 
 password.addEventListener('keyup', () =>{
 
-    if(regexPassword.test(password.value)){
+    if(regexPasswordCreation.test(password.value)){
         password.style.border = 'solid 3px green'
         messagePassword.style.display = 'none'
     }else{
@@ -52,10 +52,10 @@ password.addEventListener('keyup', () =>{
 
 form.addEventListener('submit', (e) =>{
     if(
-        !regexNom.test(firstName.value) ||
-        !regexNom.test(lastName.value) ||
-        !regexMail.test(email.value) ||
-        !regexPassword.test(password.value)
+        !regexNomCreation.test(firstName.value) ||
+        !regexNomCreation.test(lastName.value) ||
+        !regexMailCreation.test(email.value) ||
+        !regexPasswordCreation.test(password.value)
     ){
         e.preventDefault();
         alert("Veuillez compléter correctement le formulaire")

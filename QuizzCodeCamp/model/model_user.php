@@ -50,7 +50,7 @@ function userAdd($bdd, $nom, $prenom, $email, $mdp, $avatar){
 function readUserBymail($bdd, $email){
 
     try {
-        $req = $bdd->prepare("SELECT id_user, name_user, firstname_user, email_user, mdp_user FROM users WHERE email_user =? LIMIT 1");
+        $req = $bdd->prepare("SELECT id_user, lastname_user, firstname_user, email_user, password_user FROM users WHERE email_user =? LIMIT 1");
 
         $req->bindParam(1, $email, PDO::PARAM_STR);
 

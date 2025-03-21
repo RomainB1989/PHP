@@ -7,5 +7,8 @@
             </select>
         </div>
         <div class="quizzList">
+            <ul>
+                <?= $quizzList ?>
+            </ul>
         </div>
 </main>

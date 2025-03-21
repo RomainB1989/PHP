@@ -85,30 +85,67 @@ td{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    #changeAvatar{
-    color: transparent;
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    transform: translateX(32%);
-    border: none;
-    label{
-        border: solid 2px black;
-    }
-    
 }
+
+input[type="file"]{
+    display: none;
+}
+
+.custom-file{
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #610909a2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 4px 4px 4px rgb(0, 0, 0, 40%);
+    transition: transform 0.3s ease;
+}
+
+.custom-file:hover{
+    transform: scale(1.1);
+    background-color:#219ED3;
+}
+
+#avatarContainer{
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
 }
 #avatarPreview{
-    margin: 10px auto;
-    padding: 10px;
-    border: solid black 1px;
-    border-radius: 10px;
+        object-fit: cover;
+        border-radius: 10%;
+        display: none;
+        max-width: 150px;
+        max-height: 150px;
+        transition: transform 0.3s ease;
+}
+#avatarPreview:hover{
+        transform: scale(1.1);
 }
 
 button, input{
     padding: 10px;
-    margin: 10px;
+    /* margin: 10px; */
     border: solid black 2px;
+}
+
+.validButton{
+    border-radius: 5px;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    border: black 2px solid;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 4px 4px 4px rgb(0, 0, 0, 40%);
+    transition: transform 0.3s ease;
+}
+.validButton:hover{
+    transform: scale(1.1);
+    background-color: rgb(168, 49, 49);
 }
 
 #supprimerCompte{

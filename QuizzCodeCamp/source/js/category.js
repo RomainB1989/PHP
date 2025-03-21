@@ -1,3 +1,32 @@
+//Search bar
+const searchBar = document.querySelector('.search-input');
+
+searchBar.addEventListener("input", searchFilter);
+
+
+function searchFilter() {
+    const cards = document.querySelectorAll('.quizz');
+
+    if (searchBar.value != "") {
+        for (let card of cards) {
+            let title = card.querySelector('.titleQ').textContent.toLocaleLowerCase();
+            let filterValue = searchBar.value.toLocaleLowerCase();
+            if(!title.includes(filterValue)){
+                card.style.display = "none";
+            } else {
+                card.style.display = "block";
+            }
+        }
+    } else {
+        for (let card of cards) {
+            card.style.display = "block";
+        }
+    }
+}
+searchFilter();
+
+
+
 const apiFetch = async(url, body)=> { 
     try{
         const rawData = await fetch(url, body);
@@ -24,9 +53,9 @@ const quizzList = document.querySelector(".quizzList");
 let arrayQuestion =  await apiFetch("https://quizz.adrardev.fr/api/question/all",{method:"GET"});
 let listUsers = await apiFetch("https://quizz.adrardev.fr/api/users", {method:"GET"});
 let listCategories = await apiFetch("https://quizz.adrardev.fr/api/category/all", {method:"GET"});
-console.log(arrayQuestion);
-console.log(listUsers);
-console.log(listCategories);
+// console.log(arrayQuestion);
+// console.log(listUsers);
+// console.log(listCategories);
 
 let arrayQuizz = await apiFetch("https://quizz.adrardev.fr/api/quizzs/all", {method:"GET"});
 
@@ -45,22 +74,23 @@ listCategories.forEach(element => {
  * @param {*} element 
  */
 function createCardQuizz(element){
-    console.log(element.id);
+    //console.log(element.id);
     const quizzBox = document.createElement("div");
     quizzBox.style.display = "block";
     quizzBox.setAttribute("class", "quizz");
     
-    const titleQuizz = document.createElement("h3");
+    const titleQuizz = document.createElement("h1");
     titleQuizz.innerText = element.title;
     quizzBox.appendChild(titleQuizz);
-    
+    titleQuizz.setAttribute("class", "titleQ");
+
     const description = document.createElement("p");
     description.innerText = element.description;
     quizzBox.appendChild(description);
     
     const listCategory = document.createElement("ul");
     listCategory.innerText = "Catégories :";
-    listCategory.style.marginRight = "10px";
+    //listCategory.style.marginRight = "10px";
     element.categories.forEach(categories => {
         const nameCategory = document.createElement("li");
         nameCategory.innerText = categories.title;
@@ -71,8 +101,8 @@ function createCardQuizz(element){
     const link = document.createElement("a");
     link.innerText = "Jouer au Quizz !";
     
-    let url = new URL(`/quizz.html?id=${element.id}`, window.location.origin);
-    console.log(window.location.origin);
+    let url = new URL(`adrar/QuizzCodeCamp/controllerQuizz.php?id=${element.id}`, window.location.origin);
+    //console.log(window.location.origin);
 
     link.setAttribute("href", url);
     link.style.textDecoration = "none";

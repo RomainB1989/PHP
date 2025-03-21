@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('inscriptionForm');
   const previewPhoto = document.getElementById('previewPhoto');
   const photoInput = document.getElementById('photoInscription');
+  const messageApi = document.getElementById('messageApi');
 
   // Prévisualisation de la photo
   photoInput.addEventListener('change', (e) => {
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   console.log(JSON.stringify(userData));
     try {
-      const response = await fetch('http://localhost/adrar/QuizzCodeCamp/controllerCreationCompte.php', {
+      const response = await fetch('http://localhost/adrar/QuizzCodeCamp/apiCreationCompte.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,44 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (response.ok) {
         const result = await response.json();
-        console.log('Compte créé avec succès:', result);
+        //console.log('Compte créé avec succès:', result);
+        messageApi.style.color = 'green';
+        messageApi.innerText = result["message"];
         // Ajoutez ici le code pour gérer la réussite (ex: redirection, message de succès)
       } else {
-        console.log(result);
+        const result = await response.json(); // Récupérer le message d'erreur
+        messageApi.style.color = 'red';
+        messageApi.innerText = result["message"]; // Afficher le message d'erreur directement
         // Ajoutez ici le code pour gérer l'échec
       }
     } catch (error) {
-      console.error('Erreur:', error);
-      // Gérez les erreurs de réseau ou autres ici
-    }
-  });
-
-  // Validation de l'email
-  const emailInput = document.getElementById('inscriptionEmail');
-  const messageMail = document.getElementById('messageMail');
-
-  emailInput.addEventListener('input', () => {
-    if (emailInput.validity.valid) {
-      messageMail.textContent = 'Email valide';
-      messageMail.style.color = 'green';
-    } else {
-      messageMail.textContent = 'Email invalide';
-      messageMail.style.color = 'red';
-    }
-  });
-
-  // Validation du mot de passe
-  const passwordInput = document.getElementById('inscriptionPassword');
-  const messagePassword = document.getElementById('messagePassword');
-
-  passwordInput.addEventListener('input', () => {
-    if (passwordInput.validity.valid) {
-      messagePassword.textContent = 'Mot de passe valide';
-      messagePassword.style.color = 'green';
-    } else {
-      messagePassword.textContent =
-        'Le mot de passe doit contenir au moins 8 caractères';
-      messagePassword.style.color = 'red';
+      messageApi.style.color = 'red';
+      messageApi.innerText = 'Erreur Api: ' + error.message; // Afficher le message d'erreur de l'exception
     }
   });
 });

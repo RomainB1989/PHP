@@ -19,11 +19,11 @@ const messageChangeEmail =document.querySelector('#messageChangeEmail')
 const messageChangePassword =document.querySelector('#messageChangePassword')
 
 
-const regexMail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
-const regexPassword = /^(?=.*[$&@!]).{8,}$/;
+const regexMailCompte = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
+const regexPasswordCompte = /^(?=.*[$&@!]).{8,}$/;
 
 changeEmail.addEventListener('keyup', ()=>{
-    if(regexMail.test(changeEmail.value)){
+    if(regexMailCompte.test(changeEmail.value)){
         changeEmail.style.border = 'green solid 2px'
         messageChangeEmail.innerText = 'Email valide'
         messageChangeEmail.style.color = '#0EBF14'
@@ -35,7 +35,7 @@ changeEmail.addEventListener('keyup', ()=>{
 })
 
 changePassword.addEventListener('keyup', ()=>{
-    if(regexPassword.test(changePassword.value)){
+    if(regexPasswordCompte.test(changePassword.value)){
         changePassword.style.border = 'green solid 2px'
         messageChangePassword.innerText = 'Le mot de passe est valide'
         messageChangePassword.style.color = '#0EBF14'        

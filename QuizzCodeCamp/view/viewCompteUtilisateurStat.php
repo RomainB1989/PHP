@@ -1,5 +1,5 @@
 <main>
-        <h3>Bonjour Pseudo</h3>
+    <h3>Bonjour <?= $_SESSION["firstname_user"]?> <?= $_SESSION["lastname_user"] ?> </h3>
         <div id="onglet">
             <div id="mesStats">
                     <p>Mes statistiques</p>
@@ -57,18 +57,21 @@
                 <h3>Modifier mon compte</h3>
                 <form action="" method="post" enctype="multipart/form-data">
 
-                    <div id="avatarSelector">
-                        <label for="avatar">Changer d'avatar</label>
-                        <input type="file" id="changeAvatar" name="avatar" accept="image/*">
-                    </div>
-                    
+                <div id="avatarSelector">
+                    <label for="changeAvatar" class="custom-file">Changer d'avatar</label>
+                    <input type="file" id="changeAvatar" name="avatar" accept="image/*">
+                </div>
+
+                <div id="avatarContainer">
                     <img id="avatarPreview" src="" alt="avatar" style="display: none; height: 200px; width: 200px">
+                </div>
 
                     <input type="email" id="changeEmail" name="email" placeholder="Changer mon Email">
                     <p id="messageChangeEmail"></p>
                     <input type="password" id="changePassword" name="password" placeholder="Changer mon mot de passe">
                     <p id="messageChangePassword"></p>
-                    <button type="submit">Confirmer les modifications</button>
+                    <button type="submit" class="validButton">Confirmer les modifications</button>
+                
                 </form>
 
                     <div id="supprimerCompte">
@@ -77,7 +80,7 @@
 
                         <form action="" method="post">
                             <input type="email" id="validEmail" name="email" placeholder="Mon Email">
-                            <button type="submit">Supprimer mon compte</button>
+                            <button type="submit" class="validButton">Supprimer mon compte</button>
                         </form>
                     </div>
                 

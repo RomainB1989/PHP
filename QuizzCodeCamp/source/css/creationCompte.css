@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Quiglet';
-    src: url("./fonts/quiglet\ free.otf");
+    src: url("./fonts/quigletfree.otf");
 }
 
 body{
@@ -115,7 +115,7 @@ body{
 
         .box-account{
             position: absolute;
-            right: 80px;
+            right: 235px;
             top: 202px;
             width: 200px;
             height: auto;
@@ -131,7 +131,7 @@ body{
                 font-family: "Roboto";
                 font-size: 20px;
                 padding: 5px 0px;
-                border-top: solid 2px black;
+                /* border-top: solid 2px black; */
             }
 
             .link:nth-child(1){
@@ -242,7 +242,6 @@ input[type="file"]{ /*J'enlève le texte "aucun fichier sélectionné"*/
 }
 
 
-
 #previewContainer{
     margin-top: 10px;
     text-align: center;
@@ -262,6 +261,11 @@ input[type="file"]{ /*J'enlève le texte "aucun fichier sélectionné"*/
 }
 #previewPhoto:hover{
     transform: scale(1.1);
+}
+
+#messageApi{
+    padding: 10px, 10px;
+    font-weight: bold;
 }
 
 
